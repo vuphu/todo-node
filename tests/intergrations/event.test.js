@@ -16,7 +16,6 @@ describe('Event Routes', () => {
 
   beforeAll(async () => {
     await database.ensureInitialized(env.mongoUriTest);
-    await mongoose.connection.db.dropCollection('events');
 
     user = await userService.createUser({
       username: faker.internet.userName(),
@@ -106,7 +105,6 @@ describe('Event Routes', () => {
         })),
       );
       events = await mgo.find().sort({ _id: -1 }).lean();
-      console.log(events.map(e => e._id));
     });
 
     test('test paginate event - case 1', async () => {
