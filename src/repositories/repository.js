@@ -17,7 +17,7 @@ export class BaseRepository {
 
   async updateById(id, data) {
     return this.mongo
-      .findOneAndUpdate(id, data, {
+      .findByIdAndUpdate(id, data, {
         new: true,
       })
       .lean();
