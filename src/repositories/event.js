@@ -12,7 +12,7 @@ export default class EventRepository extends BaseRepository {
     const { skip, limit, sortBy } = options;
     return this.mongo
       .find(query)
-      .sort(sortBy || { createdAt: -1 })
+      .sort(sortBy || { _id: -1 })
       .skip(skip || 0)
       .limit(limit || constant.limit.event_records)
       .lean();
