@@ -155,3 +155,5 @@ $RECYCLE.BIN/
 *.css
 *.lock
 .env
+
+dist/
