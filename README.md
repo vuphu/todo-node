@@ -4,4 +4,4 @@
 - Install node (should install via **nvm**)
 - Copy .env-example to .env (`mv .env-example .env`
 - Install nodes packages (`npm install`)
-- Run source code (`npm start` or `npm start:dev` with hot-reload)
+- Run source code (`npm run start` or `npm run start:dev` with hot-reload)
