@@ -7,7 +7,7 @@ import { errorHandler } from '../../middlewares/error';
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/', UserRouter);
+app.use('/auth', UserRouter);
 app.use('/events', EventRouter);
 app.use(errorHandler);
 
